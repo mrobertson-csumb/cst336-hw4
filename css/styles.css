@@ -40,6 +40,7 @@ article {
     margin: 30px 2% 0 2%;
 }
 
+
 article section ul {
     list-style-position: inside;
     padding-left: 0;
@@ -53,6 +54,10 @@ article section, cite {
     margin-bottom: .5rem;
 }
 
+article pre {
+    text-align: initial;
+    font-size: 1.25em;
+}
 
 article figure {
     display: block;
@@ -63,6 +68,7 @@ article figure {
 article figure img {
     max-width: 65%;
 }
+
 .invert {
     filter: invert(60%);
 }

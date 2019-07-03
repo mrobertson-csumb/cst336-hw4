@@ -17,9 +17,44 @@
 </nav>
 <main>
     <article>
-        <cite>article source: <a href="https://en.wikipedia.org/wiki/Graph_database">wikipedia.org</a></cite>
+        <cite>article sources: <a href="https://en.wikipedia.org/wiki/Graph_database">wikipedia.org</a> and <a
+                href="https://en.wikipedia.org/wiki/Gremlin_(programming_language)">wikipedia.org</a></cite>
         <section>
-            PUT STUFF HERE
+            <strong>The same query written in SQL as well as a couple of Graph DB Query Languages</strong>
+            <br/>
+            <p>In these examples we are looking of all of bobby's friends.</p>
+            <br/>
+            <strong><a href="https://www.iso.org/standard/63555.html">SQL</a> Version</strong>
+            <pre><code>
+SELECT p2.name
+FROM people p1
+JOIN friend ON (
+    p1.id == friend.id
+)
+JOIN people p2 ON (
+    p2.id == friend.id
+)
+WHERE p1.name = 'bobby'
+            </code></pre>
+            <strong><a href="https://tinkerpop.apache.org/gremlin.html">Gremlin</a> Version</strong>
+            <pre><code>
+g.V().match(
+    as("a").label().is("person"),
+    as("a").out("friend_of").as("b"),
+    as("b").values("name").as("c"),
+    as("c").is("bobby")
+).select(b")
+            </code></pre>
+            <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> Version</strong>
+            <pre><code>
+SELECT ?b
+WHERE {
+    ?a a Person .
+    ?a ex:friend_of ?b .
+    ?b ex:name ? c .
+    FILTER(?c = "bobby")
+}
+</code></pre>
         </section>
         <figure>
             <img src="img/graph-visualization-neo4j-schema-yfiles.png" alt="Graph Query"/>

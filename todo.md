@@ -17,19 +17,18 @@ https://en.wikipedia.org/wiki/Graph_database
 
 # post:
 
-- clickable link to heroku
-- list the new html/css properties used
-- used HTML tags
+- ✓ clickable link to heroku
+- ✓ used HTML tags
     - article
     - cite
     - section
-- used CSS
+- ✓ used CSS
     - margin
     - flex-flow
     - filter: invert()
 
-- validator.w3.org screenshot
-    - todo
+- ✓ validator.w3.org
+    - ✓ 4 screenshots
 
 
 comment:

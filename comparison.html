@@ -19,7 +19,45 @@
     <article>
         <cite>article source: <a href="https://en.wikipedia.org/wiki/Graph_database">wikipedia.org</a></cite>
         <section>
-            PUT STUFF HERE
+            <table>
+                <thead id="table-header">
+                <tr>
+                    <th><strong>Relational Database</strong></th>
+                    <th><strong>Graph Database</strong></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="table-row">
+                    <td>has strict schema</td>
+                    <td>has fluid/everchanging schema</td>
+                </tr>
+                <tr class="table-row">
+                    <td>data should be normalized</td>
+                    <td>data is denormalized</td>
+                </tr>
+                <tr class="table-row">
+                    <td>fast row-by-row access</td>
+                    <td>un-impressive performance on table-style data</td>
+                </tr>
+                <tr class="table-row">
+                    <td>slow complex queries with many joins</td>
+                    <td>fast complex relational queries</td>
+                </tr>
+                <tr class="table-row">
+                    <td>hard to reason about complex queries</td>
+                    <td>easier to reason about complex queries</td>
+                </tr>
+                <tr class="table-row">
+                    <td>adapt object-oriented datastructures to schema</td>
+                    <td>resembles object-oriented datastructures</td>
+                </tr>
+                <tr class="table-row">
+                    <td>relationships modeled by foreign keys</td>
+                    <td>relationships are stored in database</td>
+                </tr>
+                </tbody>
+            </table>
+
         </section>
         <figure>
             <img src="img/graph-data-jim-webber-presentation.png" alt="Relational DB Schema"/>
