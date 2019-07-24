@@ -14,7 +14,7 @@ app.get('/example', (req, resp) => resp.render('example.html', {nav: req.url}));
 app.get('/reviews', (req, resp) => resp.render('reviews.html', {nav: req.url, reviews: fakeReviews()}));
 
 // server listener
-app.listen('8081', '0.0.0.0', () => console.log('express server is running...'));
+app.listen(process.env.PORT, () => console.log('express server is running...'));
 
 
 function fakeReviews() {
