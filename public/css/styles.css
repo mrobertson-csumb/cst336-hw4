@@ -3,8 +3,22 @@
 /* from lab 1 */
 
 body {
-    background-color: black;
-    color: gray;
+    background-color: rgba(100, 100, 100, 80);
+    color: rgba(9, 9, 9, .80);
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.current {
+    font-weight: bolder;
+    filter: invert();
+}
+
+hr {
+    height: 2px;
+    color: rgba(9, 9, 9, .5);
+    background-color: rgba(9, 9, 9, .5);
+    border: none;
 }
 
 h1, header {
@@ -21,6 +35,7 @@ header {
 nav {
     height: 1.5rem;
     padding-top: 4.25rem;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 header, main, nav, footer {
@@ -69,20 +84,24 @@ article figure img {
     max-width: 65%;
 }
 
-.invert {
-    filter: invert(60%);
+.csumblogo, .blend {
+    /*mix-blend-mode: color-burn;*/
+    filter: invert() brightness(12%);
+}
+
+.burn {
+    mix-blend-mode: difference;
 }
 
 nav a {
     padding: 15px 15px 4px;
     font-size: 1.8em;
     text-decoration: none;
-    color: white;
+    color: rgba(222, 222, 222, 80);
 }
 
 footer {
     font-size: smaller; /* text smaller */
-    color: chartreuse; /* different color (your choice) */
     bottom: 0;
     width: 100%;
     height: 2.5rem;
@@ -105,21 +124,33 @@ div, table {
     margin: 0 auto;
 }
 
-td {
+td, th {
     padding-right: 10px;
     font-size: 1.3em;
+    text-align: center;
 }
 
 td strong {
     color: orange;
 }
 
+main a {
+    font-weight: bolder;
+    font-size: 1.2em;
+    mix-blend-mode: difference;
+}
+
 #table-header {
-    background-color: #351A00;
+    font-weight: bolder;
+    font-size: 1.3em;
+    color: rgba(9, 9, 9, .80);
+    background-color: darkgray;
 }
 
 .table-row {
-    background-color: #753900;
+    color: rgba(9, 9, 9, .80);
+    background-color: lightgray;
+    font-weight: lighter;
 }
 
 ul {
@@ -128,6 +159,7 @@ ul {
     text-align: left;
 }
 
-.hobby {
-    color: yellow;
+.review {
+    margin-bottom: 2em;
+    font-size: 1.5em;
 }

@@ -1,0 +1,23 @@
+{
+  "name": "cst336-hw4",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrobertson-csumb/cst336-hw4.git"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ejs": "^2.6.2",
+    "faker": "^4.1.0",
+    "ava": "^2.2.0"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/mrobertson-csumb/cst336-hw4/issues"
+  },
+  "homepage": "https://github.com/mrobertson-csumb/cst336-hw4#readme"
+}

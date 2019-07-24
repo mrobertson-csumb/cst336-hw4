@@ -1,0 +1,38 @@
+<hr/>
+<nav class="nav">
+    <!-- home -->
+    <% if(nav == '/' ) { %>
+        <a class="current" href="/">Overview</a>
+    <% } else { %>
+        <a href="/">Overview</a>
+    <% } %>
+
+    <!-- history -->
+    <% if(nav == '/history' ) { %>
+        <a class="current" href="/history">History</a>
+    <% } else { %>
+        <a href="/history">History</a>
+    <% } %>
+
+    <!-- comparison -->
+    <% if(nav == '/comparison' ) { %>
+        <a class="current" href="/comparison">Comparison</a>
+    <% } else { %>
+        <a href="/comparison">Comparison</a>
+    <% } %>
+
+    <!-- example -->
+    <% if(nav == '/example' ) { %>
+        <a class="current" href="/example">Example</a>
+    <% } else { %>
+        <a href="/example">Example</a>
+    <% } %>
+
+    <!-- reviews -->
+    <% if(nav == '/reviews' ) { %>
+        <a class="current" href="/reviews">Reviews</a>
+    <% } else { %>
+        <a href="/reviews">Reviews</a>
+    <% } %>
+</nav>
+<hr/>

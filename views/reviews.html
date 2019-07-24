@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+
+    <title>Graph Databases — Reviews</title>
+</head>
+<body>
+<header>Graph Databases — Reviews</header>
+
+<% include partials/nav %>
+
+<main>
+    <article>
+        <% for(let i=0; i < reviews.length; i++) { %>
+        <p><span class="person"><%= reviews[i].emp %></span> says: <br/>
+            <span class="review">"<%= reviews[i].review %>"</span></p>
+        <% } %>
+    </article>
+</main>
+
+<% include partials/footer %>
+
+</body>
+</html>

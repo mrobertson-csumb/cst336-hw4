@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <% include partials/head %>
 
     <title>Graph Databases — History</title>
 </head>
 <body>
 <header>Graph Databases — History</header>
-<nav>
-    <a href="index.php">Overview</a>
-    <a id="current-page" href="history.html">History</a>
-    <a href="comparison.html">Comparison</a>
-    <a href="example.html">Example</a>
-</nav>
+
+<% include partials/nav %>
+
 <main>
     <article>
         <cite>article source: <a href="https://en.wikipedia.org/wiki/Graph_database">wikipedia.org</a></cite>
@@ -36,7 +31,7 @@
             </ul>
         </section>
         <figure>
-            <img src="img/graph_banner.png" alt="Some Graphs"/>
+            <img class="burn" src="/img/graph_banner.png" alt="Some Graphs"/>
             <figcaption>Some graphs <br/><cite>image from: <a
                     href="https://www.mathworks.com/help/matlab/graph-and-network-algorithms.html">
                 mathworks.com</a></cite></figcaption>
@@ -44,14 +39,8 @@
     </article>
 </main>
 
-<footer>
-    <hr/>
-    <!-- add logo within the footer -->
-    <figure><img class="invert" src="img/csumb-logo-black.png" alt="CSUMB Logo"></figure>
-    CST 336 Internet Programming. 2019&copy; Robertson <br/>
-    <strong>Disclaimer:</strong> Most of the information in this page is fictitious, the other parts are copied from
-    other probably bogus sources.<br/>It is intended for academic use only.
-</footer>
+<% include partials/footer %>
+
 </body>
 
 </html>

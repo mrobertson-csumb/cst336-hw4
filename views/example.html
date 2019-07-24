@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <% include partials/head %>
 
     <title>Graph Databases — Example</title>
 </head>
 <body>
 <header>Graph Databases — Example</header>
-<nav>
-    <a href="index.php">Overview</a>
-    <a href="history.html">History</a>
-    <a href="comparison.html">Comparison</a>
-    <a id="current-page" href="example.html">Example</a>
-</nav>
+
+<% include partials/nav %>
+
 <main>
     <article>
         <cite>article sources: <a href="https://en.wikipedia.org/wiki/Graph_database">wikipedia.org</a> and <a
@@ -25,8 +20,7 @@
             <p>In these examples we are looking of all of bobby's friends.</p>
             <br/>
             <strong><a href="https://www.iso.org/standard/63555.html">SQL</a> Version</strong>
-            <pre><code>
-SELECT p2.name
+            <pre><code class="language-sql">SELECT p2.name
 FROM people p1
 JOIN friend ON (
     p1.id == friend.id
@@ -34,19 +28,16 @@ JOIN friend ON (
 JOIN people p2 ON (
     p2.id == friend.id
 )
-WHERE p1.name = 'bobby'
-            </code></pre>
+WHERE p1.name = 'bobby'</code></pre>
             <strong><a href="https://tinkerpop.apache.org/gremlin.html">Gremlin</a> Version</strong>
-            <pre><code>
-g.V().match(
+            <pre><code class="language-js">g.V().match(
     as("a").label().is("person"),
     as("a").out("friend_of").as("b"),
     as("b").values("name").as("c"),
     as("c").is("bobby")
-).select(b")
-            </code></pre>
+).select(b")</code></pre>
             <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> Version</strong>
-            <pre><code>
+            <pre><code class="language-sql">
 SELECT ?b
 WHERE {
     ?a a Person .
@@ -57,7 +48,7 @@ WHERE {
 </code></pre>
         </section>
         <figure>
-            <img src="img/graph-visualization-neo4j-schema-yfiles.png" alt="Graph Query"/>
+            <img class="burn" src="/img/graph-visualization-neo4j-schema-yfiles.png" alt="Graph Query"/>
             <figcaption>A visual example of a Graph Query<br/><cite>image from: <a
                     href="https://neo4j.com/blog/graph-visualization-neo4j-schemas-yfiles/">
                 neo4j.com</a></cite></figcaption>
@@ -65,14 +56,8 @@ WHERE {
     </article>
 </main>
 
-<footer>
-    <hr/>
-    <!-- add logo within the footer -->
-    <figure><img class="invert" src="img/csumb-logo-black.png" alt="CSUMB Logo"></figure>
-    CST 336 Internet Programming. 2019&copy; Robertson <br/>
-    <strong>Disclaimer:</strong> Most of the information in this page is fictitious, the other parts are copied from
-    other probably bogus sources.<br/>It is intended for academic use only.
-</footer>
-</body>
+<% include partials/footer %>
+<% include partials/prism %>
 
+</body>
 </html>
